@@ -97,7 +97,7 @@ const RendyLandingPage: React.FC = () => {
                   data-tally-src="https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                   loading="lazy"
                   width="100%"
-                  height={181}
+                  height={275}
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
