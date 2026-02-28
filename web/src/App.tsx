@@ -47,7 +47,7 @@ const RendyLandingPage: React.FC = () => {
               Клиент не пришел? Бот подтверждает визиты и сохраняет ваше время
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Пока вы делаете маникюр, бот сам ведет переписку и возвращает клиентов
+              Пока вы работаете с клиентом, бот сам записывает новых, подтверждает визиты и возвращает тех, кто пропал.
             </p>
             <div className="flex justify-center">
               <Button
