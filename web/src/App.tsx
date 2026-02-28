@@ -6,11 +6,9 @@ import {
   Clock,
   Bell,
   BarChart3,
-  TrendingUp,
   CheckCircle2,
   Sparkles,
   Users,
-  DollarSign,
   ArrowRight,
 } from 'lucide-react'
 
@@ -123,7 +121,7 @@ const RendyLandingPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Rendy CRM делает это за вас</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Бот делает это за вас</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Ваш умный ассистент, который берет запись на себя
             </p>
@@ -153,91 +151,12 @@ const RendyLandingPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <Badge className="mb-4" variant="secondary">
-                  <TrendingUp className="w-4 h-4 mr-2 inline" />
-                  Аналитика
-                </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Не просто календарь, а инструмент роста</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Смотрите наглядную аналитику: какие услуги самые прибыльные, кто из клиентов приносит больше денег и где
-                  «дыры» в вашем доходе.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <DollarSign className="w-5 h-5" />
-                    </div>
-                    <span className="text-foreground">Отслеживание доходов по услугам</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <Users className="w-5 h-5" />
-                    </div>
-                    <span className="text-foreground">Анализ поведения клиентов</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <BarChart3 className="w-5 h-5" />
-                    </div>
-                    <span className="text-foreground">Прогнозирование загрузки</span>
-                  </div>
-                </div>
-              </div>
-              <div className="relative">
-                <Card className="p-6 bg-card border-border shadow-xl">
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center pb-4 border-b border-border">
-                      <span className="text-muted-foreground">Доход за месяц</span>
-                      <span className="text-2xl font-bold text-foreground">₽ 127,500</span>
-                    </div>
-                    <div className="space-y-3">
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-sm text-muted-foreground">Маникюр</span>
-                          <span className="text-sm font-medium">₽ 65,000</span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <div className="h-full bg-primary rounded-full" style={{ width: '51%' }} />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-sm text-muted-foreground">Педикюр</span>
-                          <span className="text-sm font-medium">₽ 42,500</span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <div className="h-full bg-primary/70 rounded-full" style={{ width: '33%' }} />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-sm text-muted-foreground">Покрытие</span>
-                          <span className="text-sm font-medium">₽ 20,000</span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <div className="h-full bg-primary/50 rounded-full" style={{ width: '16%' }} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Начните тратить время на творчество, а не на рутину</h2>
             <Button size="lg" className="text-lg px-10 py-7 group">
-              Подключить Rendy CRM прямо сейчас
+              Подключить Бот прямо сейчас
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
@@ -263,14 +182,14 @@ const RendyLandingPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-1 gap-8 mb-8">
               <div className="text-center">
-                <h3 className="font-bold text-xl mb-4">Rendy CRM</h3>
+                <h3 className="font-bold text-xl mb-4">Бот</h3>
                 <p className="text-muted-foreground">
                   Умный ассистент для автоматизации записи клиентов • Mini App в Telegram
                 </p>
               </div>
             </div>
             <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
-              <p className="mb-2">© 2026 Rendy CRM. Все права защищены.</p>
+              <p className="mb-2">© 2026 Бот. Все права защищены.</p>
               <p className="text-xs">
                 *WhatsApp принадлежит компании Meta, признанной экстремистской организацией и запрещенной на территории РФ.
               </p>
