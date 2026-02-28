@@ -66,7 +66,7 @@ const RendyLandingPage: React.FC = () => {
               </Button>
             </div>
             <p className="mt-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm md:text-base font-semibold text-primary">
-              Уже подключаются мастера маникюра по всей России
+              Каждый пропавший клиент = 1-2 часа работы без дохода. За месяц - до 10 000 ₽ просто теряется
             </p>
             <p className="mt-6 text-sm md:text-base font-medium text-foreground">30 дней бесплатно • 990 ₽/мес</p>
           </div>
