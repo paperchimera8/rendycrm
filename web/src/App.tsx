@@ -44,10 +44,10 @@ const RendyLandingPage: React.FC = () => {
               Mini App в Telegram • Умный ассистент для мастеров
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Клиент не пришел? Бот подтверждает визиты и сохраняет ваше время
+              Запись, переносы, напоминания — голова кипит? Клиенты пропадают?
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Пока вы работаете с клиентом, бот сам записывает новых, подтверждает визиты и возвращает тех, кто пропал.
+              Пока вы работаете — бот ведёт запись и держит клиентов под контролем.
             </p>
             <div className="flex justify-center">
               <Button
