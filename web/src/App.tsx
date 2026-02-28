@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Button } from './components/ui/button'
 import { Card, CardContent } from './components/ui/card'
 import { Badge } from './components/ui/badge'
@@ -33,14 +33,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
 }
 
 const RendyLandingPage: React.FC = () => {
-  const [showEarlyAccessEmbed, setShowEarlyAccessEmbed] = useState(false)
-
-  useEffect(() => {
-    if (!showEarlyAccessEmbed) return
-    type TallyWindow = Window & { Tally?: { loadEmbeds: () => void } }
-    ;(window as TallyWindow).Tally?.loadEmbeds()
-  }, [showEarlyAccessEmbed])
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <section className="relative overflow-hidden border-b border-border">
@@ -61,29 +53,54 @@ const RendyLandingPage: React.FC = () => {
               <Button
                 size="lg"
                 className="text-lg px-8 py-6 group"
-                onClick={() => setShowEarlyAccessEmbed(true)}
+                onClick={() =>
+                  window.open(
+                    'https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
               >
-                Попробовать бесплатно
+                Попробовать бесплатно (оплата не требуется)
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
-            <p className="mt-4 text-base font-medium text-foreground">
-              Попробовать бесплатно • 30 дней без карты • 990 ₽/мес
+            <p className="mt-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm md:text-base font-semibold text-primary">
+              Уже подключаются мастера маникюра по всей России
             </p>
-            {showEarlyAccessEmbed ? (
-              <div className="mt-8 max-w-3xl mx-auto rounded-xl border border-border bg-card p-3">
-                <iframe
-                  data-tally-src="https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                  loading="lazy"
-                  width="100%"
-                  height={275}
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  title="Подтверждение раннего доступа"
+            <p className="mt-6 text-sm md:text-base font-medium text-foreground">30 дней бесплатно • 990 ₽/мес</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Как это работает
+            </h2>
+            <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:items-center">
+              <div className="text-left space-y-5 lg:pr-8 lg:-mt-6">
+                <p className="text-xl md:text-2xl text-muted-foreground">1) Подключаете Telegram за 2 минуты</p>
+                <p className="text-xl md:text-2xl text-muted-foreground">
+                  2) Бот предлагает клиентам свободные окна
+                </p>
+                <p className="text-xl md:text-2xl text-muted-foreground">
+                  3) Спрашивает о качестве услуги и отвечает на вопросы
+                </p>
+                <p className="text-xl md:text-2xl text-muted-foreground">4) Вы получаете подтверждённые записи</p>
+              </div>
+              <div className="max-w-md w-full justify-self-end rounded-2xl overflow-hidden border border-border shadow-xl bg-card">
+                <div className="px-4 py-2 text-sm font-semibold text-foreground bg-muted/40 border-b border-border">
+                  🤖 RendyCRM
+                </div>
+                <img
+                  src="/how-it-works-chat.png"
+                  alt="Пример диалога бота с клиентом"
+                  className="w-full h-auto block"
                 />
               </div>
-            ) : null}
+            </div>
           </div>
         </div>
       </section>
@@ -159,7 +176,7 @@ const RendyLandingPage: React.FC = () => {
               </div>
             </div>
             <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
-              <p className="mb-2">© 2026 Бот. Все права защищены.</p>
+              <p className="mb-2">© 2026 RendyCRM. Все права защищены.</p>
               <p className="text-xs">
                 *WhatsApp принадлежит компании Meta, признанной экстремистской организацией и запрещенной на территории РФ.
               </p>
