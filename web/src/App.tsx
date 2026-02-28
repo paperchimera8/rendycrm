@@ -32,21 +32,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
   )
 }
 
-interface PainPointProps {
-  text: string
-}
-
-const PainPoint: React.FC<PainPointProps> = ({ text }) => {
-  return (
-    <div className="flex items-start gap-4 p-6 rounded-xl bg-gradient-to-br from-card to-muted/30 border border-border shadow-sm hover:shadow-md transition-all duration-300">
-      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center">
-        <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-      </div>
-      <p className="text-foreground/90 leading-relaxed">{text}</p>
-    </div>
-  )
-}
-
 const RendyLandingPage: React.FC = () => {
   const [showEarlyAccessEmbed, setShowEarlyAccessEmbed] = useState(false)
 
@@ -99,21 +84,6 @@ const RendyLandingPage: React.FC = () => {
                 />
               </div>
             ) : null}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Хватит терять прибыль и время!</h2>
-            <p className="text-center text-muted-foreground mb-12 text-lg">Знакомая ситуация?</p>
-            <div className="grid gap-4 md:grid-cols-2">
-              <PainPoint text="Запись теряется в потоке чатов и сообщений?" />
-              <PainPoint text="Клиенты забывают подтвердить визит и просто не приходят?" />
-              <PainPoint text="Тратите часы на рассылку напоминаний вручную?" />
-              <PainPoint text="Не знаете, сколько реально заработали за месяц?" />
-            </div>
           </div>
         </div>
       </section>
