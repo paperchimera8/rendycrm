@@ -90,7 +90,6 @@ const RendyLandingPage: React.FC = () => {
             <p className="mt-6 text-sm text-muted-foreground">
               Без привязки карты • Настройка за 5 минут • 30 дней бесплатно
             </p>
-            <p className="mt-2 text-base font-semibold text-foreground">Цена: 990 руб./месяц</p>
             {showEarlyAccessEmbed ? (
               <div className="mt-8 max-w-3xl mx-auto rounded-xl border border-border bg-card p-3">
                 <iframe
@@ -244,6 +243,7 @@ const RendyLandingPage: React.FC = () => {
               Подключить Rendy CRM прямо сейчас
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            <p className="mt-4 text-base font-semibold text-foreground">Цена: 990 руб./месяц</p>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
