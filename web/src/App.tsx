@@ -69,12 +69,12 @@ const RendyLandingPage: React.FC = () => {
               Mini App в Telegram • Умный ассистент для мастеров
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Пока вы работаете — Rendy CRM записывает, подтверждает и возвращает клиентов
+              Клиент не пришел? Бот подтверждает визиты и сохраняет ваше время
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Автоматизируйте запись в WhatsApp* и Telegram, забудьте про «пустые окна» и ручные напоминания
+              Пока вы делаете маникюр, бот сам ведет переписку и возвращает клиентов
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Button
                 size="lg"
                 className="text-lg px-8 py-6 group"
@@ -83,12 +83,9 @@ const RendyLandingPage: React.FC = () => {
                 Попробовать бесплатно
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                Узнать больше
-              </Button>
             </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              Без привязки карты • Настройка за 5 минут • 30 дней бесплатно
+            <p className="mt-4 text-base font-medium text-foreground">
+              Попробовать бесплатно • 30 дней без карты • 990 ₽/мес
             </p>
             {showEarlyAccessEmbed ? (
               <div className="mt-8 max-w-3xl mx-auto rounded-xl border border-border bg-card p-3">
@@ -135,22 +132,22 @@ const RendyLandingPage: React.FC = () => {
             <FeatureCard
               icon={<Clock className="w-6 h-6" />}
               title="Автозапись 24/7"
-              description="Бот сам предложит свободные «окна» в Telegram и WhatsApp*. Работает круглосуточно."
+              description="Клиенты записываются сами, пока вы работаете"
             />
             <FeatureCard
               icon={<Bell className="w-6 h-6" />}
-              title="Умные подтверждения"
-              description="Система сама спросит клиента, придет ли он. Больше никаких «ой, я забыл»."
+              title="Подтверждение визитов"
+              description="Больше никаких пустых окон и отмен в последний момент"
             />
             <FeatureCard
               icon={<Users className="w-6 h-6" />}
               title="Возврат клиентов"
-              description="Бот вежливо напомнит о себе тем, кто давно не записывался."
+              description="Бот напоминает тем, кто давно не записывался — доход растет"
             />
             <FeatureCard
               icon={<BarChart3 className="w-6 h-6" />}
-              title="Аналитика в кармане"
-              description="Четкий отчет, сколько вы заработали и на чем. Ваш график под контролем."
+              title="Аналитика"
+              description="Видите, что приносит больше денег и кто ваши лучшие клиенты"
             />
           </div>
         </div>
@@ -243,7 +240,6 @@ const RendyLandingPage: React.FC = () => {
               Подключить Rendy CRM прямо сейчас
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="mt-4 text-base font-semibold text-foreground">Цена: 990 руб./месяц</p>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
