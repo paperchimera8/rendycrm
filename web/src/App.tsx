@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   Sparkles,
   Users,
-  ArrowRight,
 } from 'lucide-react'
 
 interface FeatureCardProps {
@@ -49,22 +48,6 @@ const RendyLandingPage: React.FC = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Пока вы работаете — бот ведёт запись и заботится о клиентах. Он помогает, а вы контролируете всё.
             </p>
-            <div className="flex justify-center">
-              <Button
-                size="lg"
-                className="text-lg px-8 py-6 flex-col items-center gap-0 leading-none"
-                onClick={() =>
-                  window.open(
-                    'https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
-                    '_blank',
-                    'noopener,noreferrer',
-                  )
-                }
-              >
-                <span className="block">Попробовать бесплатно</span>
-                <span className="block">Освободите 5 часов в неделю уже в первый месяц</span>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -137,11 +120,25 @@ const RendyLandingPage: React.FC = () => {
       <section className="py-20 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Начните тратить время на творчество, а не на рутину</h2>
-            <Button size="lg" className="text-lg px-10 py-7 group">
-              Подключить Бот прямо сейчас
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Начните тратить время на творчество, а не на рутину</h2>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-6">
+              Освободите 5 часов в неделю уже в первый месяц
+            </p>
+            <div className="flex justify-center">
+              <Button
+                size="lg"
+                className="text-lg px-10 py-7"
+                onClick={() =>
+                  window.open(
+                    'https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
+              >
+                Попробовать бесплатно
+              </Button>
+            </div>
             <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
