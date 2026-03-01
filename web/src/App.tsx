@@ -1,14 +1,11 @@
 import React from 'react'
 import { Button } from './components/ui/button'
 import { Card, CardContent } from './components/ui/card'
-import { Badge } from './components/ui/badge'
 import {
   Clock,
   Bell,
   BarChart3,
   CheckCircle2,
-  Sparkles,
-  Users,
 } from 'lucide-react'
 
 interface FeatureCardProps {
@@ -38,36 +35,39 @@ const RendyLandingPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
         <div className="container mx-auto px-4 py-20 md:py-32 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 px-4 py-1.5 text-sm" variant="secondary">
-              <Sparkles className="w-4 h-4 mr-2 inline" />
-              Mini App в Telegram • Умный ассистент для мастеров
-            </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Запись, переносы, напоминания — голова кипит? Клиенты пропадают?
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Пока вы работаете — бот ведёт запись и заботится о клиентах. Он помогает, а вы контролируете всё.
+              Пока вы работаете — бот ведёт запись и заботится о клиентах. Он интегрирует всё в единую CRM-экосистему, а
+              вы контролируете процесс.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="pt-6 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <h2 className="text-center text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Как это работает
             </h2>
-            <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:items-center">
-              <div className="text-left space-y-5 lg:pr-8 lg:-mt-6">
+            <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+              <div className="text-left space-y-5 lg:pr-8">
                 <p className="text-xl md:text-2xl text-muted-foreground">1) Подключаете Telegram за 2 минуты</p>
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  2) Бот предлагает клиентам свободные окна
+                  2) Бот предлагает клиентам свободные окна, используя данные из CRM
                 </p>
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  3) Спрашивает о качестве услуги и отвечает на вопросы
+                  3) Отвечает на вопросы клиентов с помощью, спрашивает о качестве услуги и фиксирует отзывы прямо в CRM
                 </p>
-                <p className="text-xl md:text-2xl text-muted-foreground">4) Вы получаете подтверждённые записи</p>
+                <p className="text-xl md:text-2xl text-muted-foreground">
+                  4) Вы получаете подтверждённые записи, а бот заполняет CRM данными: контактами, историей взаимодействий и
+                  аналитикой
+                </p>
+                <p className="text-xl md:text-2xl text-muted-foreground">
+                  5) Все находится в одном месте: сама система учета (CRM) и бот (диалог с ним)
+                </p>
               </div>
               <div className="max-w-md w-full justify-self-end rounded-2xl overflow-hidden border border-border shadow-xl bg-card">
                 <div className="px-4 py-2 text-sm font-semibold text-foreground bg-muted/40 border-b border-border">
@@ -92,26 +92,21 @@ const RendyLandingPage: React.FC = () => {
               Ваш умный ассистент, который берет запись на себя
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto mb-16">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto mb-16">
             <FeatureCard
               icon={<Clock className="w-6 h-6" />}
               title="Автозапись 24/7"
-              description="Клиенты записываются сами, пока вы работаете"
+              description="Клиенты записываются сами, пока вы работаете — бот проверяет доступность и обновляет CRM мгновенно."
             />
             <FeatureCard
               icon={<Bell className="w-6 h-6" />}
-              title="Подтверждение визитов"
-              description="Больше никаких пустых окон и отмен в последний момент"
-            />
-            <FeatureCard
-              icon={<Users className="w-6 h-6" />}
-              title="Возврат клиентов"
-              description="Бот напоминает тем, кто давно не записывался — доход растет"
+              title="Подтверждение визитов и умные ответы"
+              description="Больше никаких пустых окон и отмен в последний момент — бот напоминает и подтверждает, отвечая на любые вопросы клиентов."
             />
             <FeatureCard
               icon={<BarChart3 className="w-6 h-6" />}
               title="Аналитика"
-              description="Видите, что приносит больше денег и кто ваши лучшие клиенты"
+              description="Видите, что приносит больше денег и кто ваши лучшие клиенты — ИИ собирает и обрабатывает данные в реальном времени."
             />
           </div>
         </div>
