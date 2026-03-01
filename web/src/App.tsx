@@ -47,12 +47,12 @@ const RendyLandingPage: React.FC = () => {
               Запись, переносы, напоминания — голова кипит? Клиенты пропадают?
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Пока вы работаете — бот ведёт запись и держит клиентов под контролем.
+              Пока вы работаете — бот ведёт запись и заботится о клиентах. Он помогает, а вы контролируете всё.
             </p>
             <div className="flex justify-center">
               <Button
                 size="lg"
-                className="text-lg px-8 py-6 group"
+                className="text-lg px-8 py-6 flex-col items-center gap-0 leading-none"
                 onClick={() =>
                   window.open(
                     'https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
@@ -61,14 +61,10 @@ const RendyLandingPage: React.FC = () => {
                   )
                 }
               >
-                Попробовать бесплатно (оплата не требуется)
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span className="block">Попробовать бесплатно</span>
+                <span className="block">Освободите 5 часов в неделю уже в первый месяц</span>
               </Button>
             </div>
-            <p className="mt-4 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm md:text-base font-semibold text-primary">
-              Каждый пропавший клиент = 1-2 часа работы без дохода. За месяц - до 10 000 ₽ просто теряется
-            </p>
-            <p className="mt-6 text-sm md:text-base font-medium text-foreground">30 дней бесплатно • 990 ₽/мес</p>
           </div>
         </div>
       </section>
