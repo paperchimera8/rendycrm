@@ -11,6 +11,14 @@ function Hero() {
   const screenSize = useScreenSize()
   const textSizeClass = screenSize.greaterThanOrEqual('md') ? 'text-6xl' : 'text-4xl'
   const sliderHeightClass = screenSize.greaterThanOrEqual('md') ? 'h-24' : 'h-16'
+  const metrikaId = 107136760
+
+  const trackGoal = (goal: string) => {
+    const ym = (window as unknown as { ym?: (...args: unknown[]) => void }).ym
+    if (typeof ym === 'function') {
+      ym(metrikaId, 'reachGoal', goal)
+    }
+  }
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -62,7 +70,10 @@ function Hero() {
         <Button
           size="lg"
           className="gap-2 !bg-gradient-to-r !from-[rgb(175,128,208)] !to-[rgb(128,137,168)] hover:!from-[rgb(155,100,195)] hover:!to-[rgb(100,115,155)] text-white/90"
-          onClick={() => setShowYandexForm(true)}
+          onClick={() => {
+            setShowYandexForm(true)
+            trackGoal('yandex_form_open')
+          }}
         >
           Попробовать <MoveRight className="w-4 h-4" />
         </Button>
@@ -76,6 +87,7 @@ function Hero() {
             width="650"
             title="Регистрация"
             className="max-w-full min-h-[520px] rounded-xl border border-border bg-background"
+            onLoad={() => trackGoal('yandex_form_loaded')}
           />
         </div>
       )}
