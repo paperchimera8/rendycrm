@@ -2,12 +2,10 @@ import React from 'react'
 import { Hero } from '@/components/ui/animated-hero'
 import { BackgroundGradientAnimationDemo } from '@/components/ui/background-gradient-animation-demo'
 import { FeaturesSectionWithHoverEffects } from '@/components/ui/feature-section-with-hover-effect'
-import { SidebarLayout } from '@/components/ui/sidebar-demo'
 
 const RendyLandingPage: React.FC = () => {
   return (
-    <SidebarLayout>
-      <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
         <section className="relative overflow-hidden border-b border-border min-h-[825px] flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
           <div className="container mx-auto px-4 relative w-full">
@@ -42,17 +40,24 @@ const RendyLandingPage: React.FC = () => {
         <footer className="py-12 border-t border-border bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="pt-8 border-t border-border text-center text-muted-foreground text-sm">
-                <p className="mb-2">© 2026 RendyCRM. Все права защищены.</p>
-                <p className="text-xs">
-                  *WhatsApp принадлежит компании Meta, признанной экстремистской организацией и запрещенной на территории РФ.
-                </p>
+              <div className="text-center text-sm mb-4 flex flex-wrap items-center justify-center gap-4">
+                <a href="/oferta.html" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                  Оферта
+                </a>
+                <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                  Политика конфиденциальности
+                </a>
+                <a href="/personal-data-consent.html" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                  Согласие на обработку персональных данных
+                </a>
+              </div>
+              <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground text-sm">
+                <p className="mb-2">© 2026 rendycrm. Все права защищены.</p>
               </div>
             </div>
           </div>
         </footer>
-      </div>
-    </SidebarLayout>
+    </div>
   )
 }
 

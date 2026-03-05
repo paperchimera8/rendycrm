@@ -6,6 +6,7 @@ import { useScreenSize } from '@/hooks/use-screen-size'
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0)
+  const [showYandexForm, setShowYandexForm] = useState(false)
   const titles = useMemo(() => ['переносов', 'записей', 'напоминаний', 'базы клиентов'], [])
   const screenSize = useScreenSize()
   const textSizeClass = screenSize.greaterThanOrEqual('md') ? 'text-6xl' : 'text-4xl'
@@ -55,23 +56,29 @@ function Hero() {
         Забудьте о сложных и непонятных CRM с долгой настройкой. Пока вы работаете — с телефона управляете процессом, а ассистент ведет учет и заботится о качестве услуг.
       </p>
       <div className="flex flex-row gap-3">
-        <Button size="lg" variant="outline">
-          Попробовать бесплатно
+        <Button size="lg" variant="outline" disabled className="!text-black !border-black/40 !border-2">
+          30 дней бесплатно
         </Button>
         <Button
           size="lg"
           className="gap-2 !bg-gradient-to-r !from-[rgb(175,128,208)] !to-[rgb(128,137,168)] hover:!from-[rgb(155,100,195)] hover:!to-[rgb(100,115,155)] text-white/90"
-          onClick={() =>
-            window.open(
-              'https://tally.so/embed/lbNLlW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
-              '_blank',
-              'noopener,noreferrer',
-            )
-          }
+          onClick={() => setShowYandexForm(true)}
         >
-          Зарегистрироваться <MoveRight className="w-4 h-4" />
+          Попробовать <MoveRight className="w-4 h-4" />
         </Button>
       </div>
+      {showYandexForm && (
+        <div className="w-full flex justify-center">
+          <iframe
+            src="https://forms.yandex.ru/cloud/69a873a149363910667ff683?iframe=1"
+            frameBorder="0"
+            name="ya-form-69a873a149363910667ff683"
+            width="650"
+            title="Регистрация"
+            className="max-w-full min-h-[520px] rounded-xl border border-border bg-background"
+          />
+        </div>
+      )}
     </div>
   )
 }
