@@ -60,6 +60,11 @@ function Hero() {
           </motion.span>
         ))}
       </div>
+      <img
+        src="/crm-dashboard.png"
+        alt="Дашборд RendyCRM"
+        className="w-full max-w-4xl rounded-xl border border-border shadow-lg"
+      />
       <p className="text-xl md:text-2xl text-muted-foreground text-center max-w-3xl">
         Забудьте о сложных и непонятных CRM с долгой настройкой. Пока вы работаете — с телефона управляете процессом, а ассистент ведет учет и заботится о качестве услуг.
       </p>
